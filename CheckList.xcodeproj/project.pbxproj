@@ -15,6 +15,7 @@
 		5C659F2921B2603500808BC4 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C659F2821B2603500808BC4 /* CustomTableViewCell.swift */; };
 		5C659F2B21B26EA800808BC4 /* MVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C659F2A21B26EA800808BC4 /* MVC.swift */; };
 		5C659F3021B2713B00808BC4 /* CheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C659F2F21B2713B00808BC4 /* CheckListItem.swift */; };
+		5C659F3221B317DF00808BC4 /* AddItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C659F3121B317DF00808BC4 /* AddItemTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5C659F2821B2603500808BC4 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		5C659F2A21B26EA800808BC4 /* MVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVC.swift; sourceTree = "<group>"; };
 		5C659F2F21B2713B00808BC4 /* CheckListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItem.swift; sourceTree = "<group>"; };
+		5C659F3121B317DF00808BC4 /* AddItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				5C659F2D21B26FAE00808BC4 /* Controller */,
 				5C659F2C21B26FA200808BC4 /* Model */,
 				5C659F1621B25D8300808BC4 /* AppDelegate.swift */,
+				5C659F3121B317DF00808BC4 /* AddItemTableViewController.swift */,
 				5C659F2821B2603500808BC4 /* CustomTableViewCell.swift */,
 				5C659F1821B25D8300808BC4 /* CheckListViewController.swift */,
 				5C659F1A21B25D8300808BC4 /* Main.storyboard */,
@@ -170,6 +173,7 @@
 			files = (
 				5C659F2921B2603500808BC4 /* CustomTableViewCell.swift in Sources */,
 				5C659F1921B25D8300808BC4 /* CheckListViewController.swift in Sources */,
+				5C659F3221B317DF00808BC4 /* AddItemTableViewController.swift in Sources */,
 				5C659F1721B25D8300808BC4 /* AppDelegate.swift in Sources */,
 				5C659F3021B2713B00808BC4 /* CheckListItem.swift in Sources */,
 				5C659F2B21B26EA800808BC4 /* MVC.swift in Sources */,

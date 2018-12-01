@@ -45,6 +45,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Q8w-fI-Tpm">
                             <connections>
                                 <action selector="addItem:" destination="3hM-8R-onN" id="Jam-09-E2A"/>
+                                <segue destination="9Kr-z8-wwe" kind="show" id="WaN-9B-Rdc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -52,6 +53,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zrb-rD-SRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="529" y="140"/>
+        </scene>
+        <!--Add New Item-->
+        <scene sceneID="B6x-52-a7c">
+            <objects>
+                <tableViewController id="9Kr-z8-wwe" customClass="AddItemTableViewController" customModule="CheckList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7mT-6Z-Rhv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="9Kr-z8-wwe" id="mUn-um-lwP"/>
+                            <outlet property="delegate" destination="9Kr-z8-wwe" id="zDj-LX-nKV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add New Item" id="VIZ-xp-t36">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="NXI-cn-PGd">
+                            <connections>
+                                <action selector="cancel" destination="9Kr-z8-wwe" id="AWe-4Y-rce"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="gXY-i2-rmX">
+                            <connections>
+                                <action selector="done" destination="9Kr-z8-wwe" id="OqG-mq-5Wf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JG2-Uf-LAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1283" y="147"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Eax-g0-ogI">
