@@ -9,30 +9,45 @@
 import UIKit
 
 class CheckListViewController: UITableViewController {
-    /*
     
-    let r0 = "Bursh my teeth"
-    let r1 = "Practice IELTS english"
-    let r2 = "Complete my home work"
-    let r3 = "Practices iOS"
-    let r4 = "Practice Android"
-    let r5 = "Practice Node.js"
+    var items = [CheckListItem]()
     
-    var r0Checked = false
-    var r1Checked = false
-    var r2Checked = false
-    var r3Checked = false
-    var r4Checked = false
-    var r5Checked = false
     
-     */
+    var row0Item : CheckListItem
+    var row1Item : CheckListItem
+    var row2Item : CheckListItem
+    var row3Item : CheckListItem
+    var row4Item : CheckListItem
+    var row5Item : CheckListItem
     
-    var row0Item : CheckListItem = CheckListItem(text: "Brush My teeth", checked: false)
-    var row1Item : CheckListItem = CheckListItem(text: "Practice IELTS English", checked: false)
-    var row2Item : CheckListItem = CheckListItem(text: "Complete my home work", checked: false)
-    var row3Item : CheckListItem = CheckListItem(text: "Practice iOS Dev", checked: false)
-    var row4Item : CheckListItem = CheckListItem(text: "Practice Android", checked: false)
-    var row5Item : CheckListItem = CheckListItem(text: "Relax Time", checked: false)
+    required init?(coder aDecoder: NSCoder) {
+        
+        row0Item = CheckListItem()
+        row0Item.checked = false
+        row0Item.text = "Complete my home work"
+        
+        row1Item = CheckListItem()
+        row1Item.text = "iOS Practice"
+        row1Item.checked = false
+        
+        row2Item = CheckListItem()
+        row2Item.text = "Android Practice time"
+        row2Item.checked = false
+        
+        row3Item = CheckListItem()
+        row3Item.text = "Node.js Practice time"
+        row3Item.checked = false
+        
+        row4Item = CheckListItem()
+        row4Item.text = "PHP Framekwork Laravel Practice"
+        row4Item.checked = false
+        
+        row5Item = CheckListItem()
+        row5Item.text = "Relax time"
+        row5Item.checked = false
+        
+        super.init(coder: aDecoder)
+    }
     
     
     var works = [String]()
