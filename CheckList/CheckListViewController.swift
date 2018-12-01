@@ -46,6 +46,16 @@ class CheckListViewController: UITableViewController {
         row5Item.checked = false
         items.append(row5Item)
         
+        let row6Item = CheckListItem()
+        row6Item.text = "Learn Machine Learning"
+        row6Item.checked = false
+        items.append(row6Item)
+        
+        let row7Item = CheckListItem()
+        row7Item.text = "learning Artificial Inteligence"
+        row7Item.checked = false
+        items.append(row7Item)
+        
         super.init(coder: aDecoder)
     }
     
@@ -59,35 +69,35 @@ class CheckListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckListItem", for: indexPath)
-        let label = cell.viewWithTag(1000) as! UILabel
+        let item = items[indexPath.row] // extract item
+        configText(withTextCell: cell, and: item) // config textlable view
+        configCheckmarks(for: cell, with: item) // config checkmark control
         
-        label.text = items[indexPath.row].text
-        
-        configCheckmarks(for: cell, at: indexPath)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
             let item = items[indexPath.row]
-            item.checked = !item.checked
-            
-            configCheckmarks(for: cell, at: indexPath)
+            item.toggoleChecked() // if true then assigne false. if false then assign true
+            configCheckmarks(for: cell, with: item)
         }
        
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    func configCheckmarks (for cell : UITableViewCell, at indexPath: IndexPath) {
-        let item = items[indexPath.row]
-
+    func configCheckmarks (for cell : UITableViewCell, with item : CheckListItem) {
         if item.checked {
             cell.accessoryType = .checkmark
         } else {
             cell.accessoryType = .none
         }
+    }
     
+    func configText (withTextCell cell: UITableViewCell, and item: CheckListItem) {
+        let label = cell.viewWithTag(1000) as! UILabel
+        label.text = item.text
     }
 
 }
