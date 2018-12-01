@@ -8,6 +8,6 @@
 
 import UIKit
 
-class CustomTableViewCell: UICollectionViewCell {
+class CustomTableViewCell: UITableViewCell {
     
 }
