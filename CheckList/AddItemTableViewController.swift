@@ -8,12 +8,25 @@
 
 import UIKit
 
-class AddItemTableViewController: UITableViewController {
+class AddItemTableViewController: UITableViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.largeTitleDisplayMode = .never
+        textField.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        textField.becomeFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return false
     }
     
     @IBAction func cancel () {
@@ -22,6 +35,10 @@ class AddItemTableViewController: UITableViewController {
     
     @IBAction func done () {
         navigationController?.popViewController(animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        return nil
     }
 
 }
