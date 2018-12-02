@@ -18,22 +18,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckListItem" rowHeight="47" id="Xz2-mQ-1LN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="CheckListItem" rowHeight="47" id="Xz2-mQ-1LN">
                                 <rect key="frame" x="0.0" y="28" width="320" height="47"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xz2-mQ-1LN" id="ecJ-YX-FZD" customClass="CustomTableViewCell" customModule="CheckList" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="46.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xz2-mQ-1LN" id="ecJ-YX-FZD">
+                                    <rect key="frame" x="0.0" y="0.0" width="252" height="46.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvS-GM-RVL">
-                                            <rect key="frame" x="16" y="15" width="277" height="18"/>
+                                            <rect key="frame" x="45" y="18" width="177" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKr-Vq-E71">
+                                            <rect key="frame" x="16" y="13" width="17" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="9Kr-z8-wwe" kind="show" identifier="EditItem" trigger="accessoryAction" id="Oyn-Xk-yyl"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -45,14 +55,14 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Q8w-fI-Tpm">
                             <connections>
                                 <action selector="addItem:" destination="3hM-8R-onN" id="Jam-09-E2A"/>
-                                <segue destination="9Kr-z8-wwe" kind="show" id="WaN-9B-Rdc"/>
+                                <segue destination="9Kr-z8-wwe" kind="show" identifier="AddItem" id="WaN-9B-Rdc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zrb-rD-SRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="529" y="140"/>
+            <point key="canvasLocation" x="528.75" y="139.43661971830986"/>
         </scene>
         <!--Add New Item-->
         <scene sceneID="B6x-52-a7c">
@@ -133,4 +143,7 @@
             <point key="canvasLocation" x="-247.5" y="140.49295774647888"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Oyn-Xk-yyl"/>
+    </inferredMetricsTieBreakers>
 </document>
